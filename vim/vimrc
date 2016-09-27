@@ -1,4 +1,4 @@
-set rtp=$CBASH_DIR/vim,/usr/share/vim,/usr/share/vim/vim74
+set rtp=$CBASH_DIR/vim,/usr/share/vim,/usr/share/vim/*
 set nocompatible              " be iMproved, required
 filetype on                   " required for compatibility with Mac OS X, See issue Vundle#167
 filetype off                  " required
