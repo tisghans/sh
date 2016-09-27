@@ -17,6 +17,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/AutoComplPop'
 
+Plugin 'Kazark/vim-SimpleSmoothScroll'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,3 +37,7 @@ set incsearch
 set relativenumber
 
 colo lyla
+
+" somewhat better scrolling
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
