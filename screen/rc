@@ -1,0 +1,5 @@
+escape ^ss
+startup_message off
+shell -$SHELL
+hardstatus alwayslastline
+hardstatus string '%{= .g} %=%{K}%{= w}%?%{K}%-Lw%?%{r}(%{W}%{w}%n%{w}*%f%t%?(%u)%?%{r})%{w}%?%{K}%+Lw%?%= %{g}'
