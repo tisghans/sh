@@ -1,3 +1,9 @@
-git clone --recursive git@github.com:gurinderhans/.cbash.git $HOME/.cbash
-mv $HOME/.bash_profile $HOME/.bash_profile.bk
-echo "source ~/.cbash/profiles/bash_profile" >> $HOME/.bash_profile
+WD=$HOME/.cbash-gurinderhans
+rm -rf $WD
+mkdir -p $WD;
+cd $WD; curl -OL https://github.com/gurinderhans/.cbash/archive/master.tar.gz;
+	tar -xzvf master.tar.gz
+
+
+
+#echo "source ~/.cbash/profiles/bash_profile" >> $HOME/.bash_profile
