@@ -1,0 +1,10 @@
+.DS_Store
+vim/viminfo
+vim/plugins/
+vim/bundle/
+bin
+ssh_keys
+vim/.netrwhist
+tmp/
+zsh/.zsh_sessions
+zsh/.zsh_history
