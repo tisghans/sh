@@ -10,9 +10,6 @@ cd $WD/.cbash-master/vim; mkdir -p bundle; cd bundle;
 	curl -OL https://github.com/VundleVim/Vundle.vim/archive/master.tar.gz;
 	tar -xzvf master.tar.gz; mv Vundle.vim-master Vundle.vim; rm master.tar.gz;
 
-# install vundle plugins
-vim +PluginInstall +qall
-
 # backup prev config
 if [ -f $HOME/.bash_profile ]; then
 	cd $HOME; mv .bash_profile .bash_profile.bk
