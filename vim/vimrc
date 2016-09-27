@@ -1,0 +1,37 @@
+set rtp=~/.cbash/vim,/usr/share/vim,/usr/share/vim/vim74
+set nocompatible              " be iMproved, required
+filetype on                   " required for compatibility with Mac OS X, See issue Vundle#167
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.cbash/vim/bundle/Vundle.vim
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin('~/.cbash/vim/plugins')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'vim-scripts/AutoComplPop'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+set viminfo+=n~/.cbash/vim/viminfo
+
+syntax enable
+
+set number
+set cursorline
+set showcmd
+set wildmenu
+set mouse=a
+set hlsearch
+set incsearch
+set relativenumber
+
+colo lyla

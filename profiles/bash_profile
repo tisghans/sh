@@ -1,0 +1,35 @@
+# gets loaded from ~ directory, so that's where .cbash should be
+ROOT=`pwd`/.cbash
+
+# load aliases
+source $ROOT/aliases/aliases.bash
+source $ROOT/aliases/git.aliases.bash
+
+# add custom bin folder to path
+export PATH="$PATH:$ROOT/bin"
+
+# history config
+export HISTSIZE=
+export HISTFILESIZE=
+export HISTCONTROL=ignoreboth:erasedups
+
+# vim config
+export VIMINIT="source $ROOT/vim/vimrc"
+
+# add some color to terminal
+export CLICOLOR=1
+export LSCOLORS=Bxfxcxdxbxegbhabagacad
+
+# git prompt, helpful for quicky repo glance
+source $ROOT/git/git-bash/git-prompt.sh
+
+# PS1
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1="\[\033[33;1m\]\W\[\033[m\] "
+export PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s) \[\e[0m\]")'
+
+if [ -f $ROOT/git/git-bash/git-completion.bash ]; then
+	source $ROOT/git/git-bash/git-completion.bash
+fi
+
+
