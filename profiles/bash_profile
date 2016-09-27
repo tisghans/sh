@@ -1,5 +1,5 @@
 # gets loaded from ~ directory, so that's where .cbash should be
-ROOT=$HOME/.cbash
+ROOT=$CBASH_DIR
 
 # load aliases
 source $ROOT/aliases/aliases.bash
