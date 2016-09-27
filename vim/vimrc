@@ -1,14 +1,12 @@
-ROOT=$CBASH_DIR
-
-set rtp=$ROOT/vim,/usr/share/vim,/usr/share/vim/vim74
+set rtp=$CBASH_DIR/vim,/usr/share/vim,/usr/share/vim/vim74
 set nocompatible              " be iMproved, required
 filetype on                   " required for compatibility with Mac OS X, See issue Vundle#167
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=$ROOT/vim/bundle/Vundle.vim
+set rtp+=$CBASH_DIR/vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
-call vundle#begin('$ROOT/vim/plugins')
+call vundle#begin("$CBASH_DIR/vim/plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -25,7 +23,7 @@ Plugin 'Kazark/vim-SimpleSmoothScroll'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set viminfo+=n$ROOT/vim/viminfo
+set viminfo+=n$CBASH_DIR/vim/viminfo
 
 syntax enable
 
