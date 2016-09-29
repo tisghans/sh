@@ -8,6 +8,8 @@ source $ROOT/aliases/git.aliases.bash
 # add custom bin folder to path
 export PATH="$PATH:$ROOT/bin"
 
+export INPUTRC=$CBASH_DIR/profiles/inputrc
+
 # history config
 export HISTSIZE=
 export HISTFILESIZE=
@@ -31,5 +33,4 @@ export PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s) \[\e[0m\]")'
 if [ -f $ROOT/git/git-bash/git-completion.bash ]; then
 	source $ROOT/git/git-bash/git-completion.bash
 fi
-
 
