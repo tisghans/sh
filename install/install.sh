@@ -25,15 +25,21 @@ elif [ -f $HOME/.bashrc ]; then
 	echo $new_config > $HOME/.bashrc
 else
 	cd $HOME;
-	echo $new_config > $HOME/.bashrc
+	echo $new_config > $HOME/.bash_profile
 fi
 
 # try to restore a previous backup
 
 BACKUP_DIR=$HOME/.cbash-gurinderhans.bk
 
-if [ -f $BACKUP_DIR ]; then
-	cp $BACKUP_DIR/viminfo $APP_DIR/vim
-	cp $BACKUP_DIR/bin $APP_DIR/
-	cp $BACKUP_DIR/ssh_keys $APP_DIR/
+if [ -f $BACKUP_DIR/viminfo ]; then
+	mv $BACKUP_DIR/viminfo $APP_DIR/vim/viminfo
+fi
+
+if [ -d $BACKUP_DIR/bin ]; then
+	mv $BACKUP_DIR/bin/ $APP_DIR/bin/
+fi
+
+if [ -d $BACKUP_DIR/ssh_keys ]; then
+	mv $BACKUP_DIR/ssh_keys/ $APP_DIR/ssh_keys/
 fi
