@@ -22,6 +22,9 @@ if [ -f $HOME/.bash_profile ]; then
 elif [ -f $HOME/.bashrc ]; then
 	cd $HOME; mv .bashrc .bashrc.bk
 	echo $new_config > $HOME/.bashrc
+else
+	cd $HOME;
+	echo $new_config > $HOME/.bashrc
 fi
 
 # try to restore a previous backup
