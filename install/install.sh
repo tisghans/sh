@@ -1,5 +1,6 @@
 INSTALLATION_FOLDER=.cbash-gurinderhans;
 WD=$HOME/$INSTALLATION_FOLDER;
+APP_DIR=$WD/.cbash;
 
 rm -rf $WD;
 
@@ -32,7 +33,7 @@ fi
 BACKUP_DIR=$HOME/.cbash-gurinderhans.bk
 
 if [ -f $BACKUP_DIR ]; then
-	mv $BACKUP_DIR/viminfo $WD/vim
-	mv $BACKUP_DIR/bin $WD/
-	mv $BACKUP_DIR/ssh_keys $WD/
+	cp $BACKUP_DIR/viminfo $APP_DIR/vim
+	cp $BACKUP_DIR/bin $APP_DIR/
+	cp $BACKUP_DIR/ssh_keys $APP_DIR/
 fi

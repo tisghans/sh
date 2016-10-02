@@ -1,12 +1,13 @@
 INSTALLATION_FOLDER=.cbash-gurinderhans
 WD=$HOME/$INSTALLATION_FOLDER
+APP_DIR=$WD/.cbash
 BACKUP_DIR=$HOME/.cbash-gurinderhans.bk
 
 # backup config files
 mkdir -p $BACKUP_DIR;
-mv $WD/vim/viminfo $BACKUP_DIR/
-mv $WD/bin $BACKUP_DIR/
-mv $WD/ssh_keys $BACKUP_DIR/
+cp $APP_DIR/vim/viminfo $BACKUP_DIR
+cp $APP_DIR/bin $BACKUP_DIR
+cp $APP_DIR/ssh_keys $BACKUP_DIR
 
 rm -rf $WD
 
