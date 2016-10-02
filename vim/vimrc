@@ -16,10 +16,12 @@ Plugin 'tpope/vim-repeat'
 
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tomtom/tcomment_vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype indent on    " required
 
 set viminfo+=n$CBASH_DIR/vim/viminfo
 
@@ -34,8 +36,13 @@ set hlsearch
 set incsearch
 set relativenumber
 
+" indentiation config
+set autoindent
+set noet ci pi sts=0 sw=4 ts=4
+
 colo seattle
 
-" somewhat better scrolling
+
+" somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>

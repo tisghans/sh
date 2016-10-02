@@ -1,8 +1,0 @@
-# This is Git's per-user configuration file.
-[user]
-	name = Gurinder Hans
-	email = hello@gurinderhans.me
-[push]
-	default = matching
-[core]
-	excludesfile = $CBASH_DIR/git/gitignore_global
