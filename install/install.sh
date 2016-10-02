@@ -22,3 +22,11 @@ elif [ -f $HOME/.bashrc ]; then
 	cd $HOME; mv .bashrc .bashrc.bk
 	echo $new_config > $HOME/.bashrc
 fi
+
+# try to restore a previous backup
+
+BACKUP_DIR=$HOME/.cbash-gurinderhans.bk
+
+mv $BACKUP_DIR/viminfo $WD/vim
+mv $BACKUP_DIR/bin $WD/
+mv $BACKUP_DIR/ssh_keys $WD/
