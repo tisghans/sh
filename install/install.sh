@@ -31,6 +31,8 @@ fi
 
 BACKUP_DIR=$HOME/.cbash-gurinderhans.bk
 
-mv $BACKUP_DIR/viminfo $WD/vim
-mv $BACKUP_DIR/bin $WD/
-mv $BACKUP_DIR/ssh_keys $WD/
+if [ -f $BACKUP_DIR ]; then
+	mv $BACKUP_DIR/viminfo $WD/vim
+	mv $BACKUP_DIR/bin $WD/
+	mv $BACKUP_DIR/ssh_keys $WD/
+fi
