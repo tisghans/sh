@@ -13,7 +13,8 @@ cd $WD/.cbash/vim; mkdir -p bundle; cd bundle;
 
 
 # backup previous config and replace with newer one
-new_config="export CBASH_DIR=$WD/.cbash/;\ source $WD/.cbash/profiles/bash_profile" 
+new_config="export CBASH_DIR=$WD/.cbash/;\
+	source $WD/.cbash/profiles/bash_profile" 
 
 if [ -f $HOME/.bash_profile ]; then
 	cd $HOME; mv .bash_profile .bash_profile.bk
