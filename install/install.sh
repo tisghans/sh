@@ -43,3 +43,5 @@ fi
 if [ -d $BACKUP_DIR/ssh_keys ]; then
 	mv $BACKUP_DIR/ssh_keys/ $APP_DIR/ssh_keys/
 fi
+
+rm -rf $BACKUP_DIR
