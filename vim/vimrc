@@ -13,10 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'vim-scripts/AutoComplPop'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tomtom/tcomment_vim'
 
 " All of your Plugins must be added before the following line
@@ -40,7 +36,7 @@ set relativenumber
 set autoindent
 set noet ci pi sts=0 sw=4 ts=4
 
-colo seattle
+colo adventurous
 
 
 " somewhat better trackpad scrolling
