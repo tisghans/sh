@@ -42,3 +42,6 @@ colo adventurous
 " somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+" better escape key seq
+inoremap jj <Esc>
