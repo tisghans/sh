@@ -23,6 +23,12 @@ set viminfo+=n$CBASH_DIR/vim/viminfo
 
 syntax enable
 
+
+set ruler
+set autowrite
+set nobackup
+set nowritebackup
+set noswapfile
 set number
 set cursorline
 set showcmd
@@ -31,6 +37,10 @@ set mouse=a
 set hlsearch
 set incsearch
 set relativenumber
+
+" panes
+set splitbelow
+set splitright
 
 " indentiation config
 set autoindent
