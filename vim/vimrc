@@ -21,8 +21,7 @@ filetype indent on    " required
 
 set viminfo+=n$CBASH_DIR/vim/viminfo
 
-syntax enable
-
+syntax on
 
 set ruler
 set autowrite
