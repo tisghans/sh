@@ -10,7 +10,6 @@ call vundle#begin("$CBASH_DIR/vim/plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomtom/tcomment_vim'
@@ -18,6 +17,8 @@ Plugin 'tomtom/tcomment_vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype indent on    " required
+
+let g:netrw_home=$CBASH_DIR.'/vim'
 
 set viminfo+=n$CBASH_DIR/vim/viminfo
 
@@ -45,12 +46,10 @@ set splitright
 set autoindent
 set noet ci pi sts=0 sw=4 ts=4
 
-colo adventurous
+" theme
+colo jitterbug
 
 
 " somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
-
-" better escape key seq
-inoremap jj <Esc>
