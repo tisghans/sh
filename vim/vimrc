@@ -10,12 +10,13 @@ call vundle#begin("$CBASH_DIR/vim/plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Other plugins
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomtom/tcomment_vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end()     " required
 filetype indent on    " required
 
 let g:netrw_home=$CBASH_DIR.'/vim'
@@ -43,8 +44,7 @@ set splitbelow
 set splitright
 
 " indentiation config
-set autoindent
-set noet ci pi sts=0 sw=4 ts=4
+set tabstop=2 softtabstop=0 shiftwidth=2 smarttab
 
 " theme
 colo jitterbug
