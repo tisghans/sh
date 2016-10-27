@@ -15,6 +15,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()     " required
 filetype indent on    " required
@@ -42,14 +45,24 @@ set relativenumber
 " panes
 set splitbelow
 set splitright
+set fillchars=vert:│ " Vertical sep between windows (unicode)
 
 " indentiation config
-set tabstop=2 softtabstop=0 shiftwidth=2 smarttab
+set tabstop=2 softtabstop=2 shiftwidth=2 smarttab noshiftround
+
 
 " theme
-colo jitterbug
+colo adventurous
 
 
 " somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+" show context around current cursor position
+set scrolloff=8
+set sidescrolloff=16
+
+" Highlight VCS conflict markers
+" @see {@link https://bitbucket.org/sjl/dotfiles/src/83aac563abc9d0116894ac61db2c63c9a05f72be/vim/vimrc?at=default&fileviewer=file-view-default#vimrc-233}
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
