@@ -29,6 +29,18 @@ _cmkdir()
 }
 alias cmkdir=_cmkdir
 
+_treeLs()
+{
+	find . -print 2>/dev/null | awk '!/\.$/ { \
+		for (i=1; i<NF; i++) { \
+			printf("%4s", "|") \
+		} \
+		print "-- "$NF \
+	}' FS='/'
+}
+
+alias ltree=_treeLs
+
 # app specific
 alias py='python'
 alias vi='vim'
