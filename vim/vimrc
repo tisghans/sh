@@ -18,6 +18,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'vim-scripts/a.vim'
 
 call vundle#end()     " required
 filetype indent on    " required
@@ -50,10 +51,8 @@ set fillchars=vert:│ " Vertical sep between windows (unicode)
 " indentiation config
 set tabstop=2 softtabstop=2 shiftwidth=2 smarttab noshiftround
 
-
 " theme
-colo adventurous
-
+colo brighton
 
 " somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
@@ -62,11 +61,6 @@ map <ScrollWheelDown> <C-E>
 " show context around current cursor position
 set scrolloff=8
 set sidescrolloff=16
-
-" Highlight VCS conflict markers
-" @see {@link https://bitbucket.org/sjl/dotfiles/src/83aac563abc9d0116894ac61db2c63c9a05f72be/vim/vimrc?at=default&fileviewer=file-view-default#vimrc-233}
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
 
 " format json
 com! FormatJSON %!python -m json.tool
