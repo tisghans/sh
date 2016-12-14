@@ -22,15 +22,13 @@ alias c='clear'                             # Clear terminal display
 alias e='exit'                              # Exit current session
 alias get='curl -OL'			    # download a file, following any redirects
 
-_cmkdir()
-{
+_cmkdir() {
 	mkdir $1
 	cd $1
 }
 alias cmkdir=_cmkdir
 
-_treeLs()
-{
+_treeLs() {
 	find . -print 2>/dev/null | awk '!/\.$/ { \
 		for (i=1; i<NF; i++) { \
 			printf("%4s", "|") \
@@ -38,7 +36,6 @@ _treeLs()
 		print "-- "$NF \
 	}' FS='/'
 }
-
 alias ltree=_treeLs
 
 # app specific
@@ -62,3 +59,11 @@ alias servethis='python -m SimpleHTTPServer 8000'
 alias ips='curl http://icanhazip.com'       # Public facing IP Address
 alias netCons='lsof -i'                     # Show all open TCP/IP sockets
 alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+alias weather='curl wttr.in'
+
+
+# ------ macOS ----------
+_mic() {
+  osascript -e "tell application \"System Events\" to set volume input volume $1"
+}
+alias mic=_mic
