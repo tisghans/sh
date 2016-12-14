@@ -20,6 +20,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-scripts/a.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ervandew/supertab'
 
 call vundle#end()     " required
 filetype indent on    " required
