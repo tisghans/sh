@@ -20,7 +20,6 @@ Plugin 'mxw/vim-jsx'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-scripts/a.vim'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'ervandew/supertab'
 
 call vundle#end()     " required
 filetype indent on    " required
@@ -54,7 +53,7 @@ set fillchars=vert:│ " Vertical sep between windows (unicode)
 set tabstop=2 softtabstop=2 shiftwidth=2 smarttab noshiftround expandtab
 
 " theme
-colo brighton
+colo minimalist
 
 " somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
