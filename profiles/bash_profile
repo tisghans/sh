@@ -31,3 +31,6 @@ if [ -f $CBASH_DIR/git/git-bash/git-completion.bash ]; then
 	source $CBASH_DIR/git/git-bash/git-completion.bash
 fi
 
+# git PS1 vars
+export GIT_PS1_SHOWDIRTYSTATE=
+export GIT_PS1_SHOWUNTRACKEDFILES=
