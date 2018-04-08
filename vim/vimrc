@@ -3,6 +3,8 @@ set nocompatible              " be iMproved, required
 filetype on                   " required for compatibility with Mac OS X, See issue Vundle#167
 filetype off                  " required
 
+let mapleader = ","           " set vim leader key
+
 " set the runtime path to include Vundle and initialize
 set rtp+=$CBASH_DIR/vim/bundle/Vundle.vim
 " alternatively, pass a path where Vundle should install plugins
@@ -20,6 +22,10 @@ Plugin 'mxw/vim-jsx'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-scripts/a.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Nopik/vim-nerdtree-direnter'
 
 call vundle#end()     " required
 filetype indent on    " required
@@ -53,7 +59,7 @@ set fillchars=vert:│ " Vertical sep between windows (unicode)
 set tabstop=2 softtabstop=2 shiftwidth=2 smarttab noshiftround expandtab
 
 " theme
-colo minimalist
+colo blue
 
 " somewhat better trackpad scrolling
 map <ScrollWheelUp> <C-Y>
@@ -64,7 +70,24 @@ set scrolloff=8
 set sidescrolloff=16
 
 " format json
-com! FormatJSON %!python -m json.tool
+com! FormatJson %!python -m json.tool
 
 " copy text to system clipboard
 vnoremap <C-c> :w !pbcopy<CR><CR>
+
+" NERDTree settings
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+
+" let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeMapOpenInTab = '<ENTER>'
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
+" CtrlP settings
+let g:ctrlp_split_window = 1
