@@ -41,6 +41,17 @@ alias ltree=_treeLs
 # app specific
 alias py='python'
 alias vi='vim'
+alias tmux='tmux -f ~/.cbash-gurinderhans/.cbash/tmux/.tmux.conf'
+alias tmx='tmux -f ~/.cbash-gurinderhans/.cbash/tmux/.tmux.conf'
+
+_tmux_attach() {
+  if [ $# -eq 0 ]; then
+    tmux attach -d -t 0
+  else
+    tmux attach -d -t $1
+  fi
+}
+alias tma=_tmux_attach
 
 # misc.
 alias docs='cd ~/Documents'
