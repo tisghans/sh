@@ -11,6 +11,7 @@ export INPUTRC=$CBASH_DIR/profiles/inputrc
 export HISTSIZE=
 export HISTFILESIZE=
 export HISTCONTROL=ignoreboth:erasedups
+export HISTFILE=$CBASH_DIR/tmp/.bash_history
 
 # vim config
 export VIMINIT="source $CBASH_DIR/vim/vimrc"
@@ -24,3 +25,8 @@ source $CBASH_DIR/git/git-bash/custom-prompt.sh
 
 export PS1="\[\033[33;1m\]\W\[\033[m\] "
 PS1+='\[\e[0;36m\]$(_git_branch)\[\e[0;36m\]$(_git_dirty)\[\e[0m\]'
+
+# add bash completion
+if [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi

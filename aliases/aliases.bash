@@ -41,12 +41,12 @@ alias ltree=_treeLs
 # app specific
 alias py='python'
 alias vi='vim'
-alias tmux='tmux -f ~/.cbash-gurinderhans/.cbash/tmux/.tmux.conf'
-alias tmx='tmux -f ~/.cbash-gurinderhans/.cbash/tmux/.tmux.conf'
+alias tmux='tmux -f $CBASH_DIR/tmux/.tmux.conf'
+alias tmx='tmux -f $CBASH_DIR/tmux/.tmux.conf'
 
 _tmux_attach() {
   if [ $# -eq 0 ]; then
-    tmux attach -d -t 0
+    tmux attach -d -t 0 || tmux new
   else
     tmux attach -d -t $1
   fi
@@ -69,7 +69,7 @@ alias g1='ssh root@g1.gurinderhans.me'
 alias servethis='python -m SimpleHTTPServer 8000' 
 alias ips='curl http://icanhazip.com'       # Public facing IP Address
 alias netCons='lsof -i'                     # Show all open TCP/IP sockets
-alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip'
 alias weather='curl wttr.in'
 
 

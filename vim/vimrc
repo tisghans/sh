@@ -28,6 +28,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Nopik/vim-nerdtree-direnter'
+Plugin 'jrozner/vim-antlr'
 
 call vundle#end()     " required
 filetype indent on    " required

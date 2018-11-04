@@ -4,3 +4,4 @@ vim/bundle/
 bin
 ssh_keys
 vim/.netrwhist
+tmp/
