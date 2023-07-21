@@ -3,6 +3,8 @@ let mapleader = ";"
 filetype plugin indent on
 syntax enable
 
+hi TabLineFill ctermfg=Black ctermbg=Black
+
 set ruler
 set hlsearch
 set incsearch

@@ -40,10 +40,11 @@ if [[ "$SHELL" != *"zsh"* ]]; then
   return
 fi
 
-_git_branch_complete() {
-  reply=$(git branch | awk '!/\*/ {print $1}')
+function _git_branch_complete(){
+  branches=($(git branch | cut -c 3-))
+  compadd -a branches
 }
 
-compctl -K _git_branch_complete git checkout
-compctl -K _git_branch_complete git branch
-compctl -K _git_branch_complete _gbd
+compdef _git_branch_complete git checkout
+compdef _git_branch_complete git branch
+compdef _git_branch_complete _gbd
